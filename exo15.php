@@ -61,7 +61,13 @@ foreach($listpersonnes as $p => $x) {
 }
 
 // echo $p1->prenom;
-// echo " ";
+//git branch -M master ou dautre main pour cree une ;
+                                                    // git init
+                                                    // git add .
+                                                    // git commit -m "first commit"
+                                                    // git branch -M main
+                                                    // git remote add origin "_git repository link here_"
+                                                    // git push -u origin main
 // echo $p1->nom;
 // echo "a ";
 // echo $p1->birthdate;
