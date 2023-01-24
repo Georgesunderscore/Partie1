@@ -1,3 +1,25 @@
 .h1red {
-    color: red;
-  }
+	color: red;
+}
+
+table, th, td {
+
+	border: 2px solid skyblue
+}
+
+.fit-picture {
+	width: 250px;
+}
+
+.flex-container-wrap {
+	display: flex;
+	flex-flow: row wrap;
+
+}
+
+.flex-container {
+	display: flex;
+	flex-flow: column;
+	ali
+
+}
