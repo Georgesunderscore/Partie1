@@ -10,6 +10,7 @@
 </head>
 
 <body>
+	<script type="text/javascript" src="validationjavascript.js"></script>
 	<h1>Exercice 9</h1>
 	<p>En utilisant l’ensemble des fonctions personnalisées crées précédemment,
 		créer un formulaire complet qui contient les informations suivantes :
@@ -43,7 +44,7 @@
 		foreach ($sex as $value) {
 
 			echo "<div>";
-			echo "<input type='radio' id = '$value' name='$value' value='$value' unchecked>";
+			echo "<input type='radio' id = '$value' name='$value' value='$value' unchecked >";
 			echo "<label for='$value'>$value</label>";
 			echo "</div>";
 		}
@@ -67,7 +68,7 @@
 	{
 		$sex = array("Homme", "Femme");
 		$elements = array(
-			"Développeur Logiciel", "Designer web", "Intégrateur",
+			"", "Développeur Logiciel", "Designer web", "Intégrateur",
 			"Chef de projet"
 		);
 
@@ -75,22 +76,36 @@
 		foreach ($nomsInput as $value) {
 			echo "<label>" . $value . "</label> <br>";
 			if ($value == "email") {
-				echo "<input type='email' name=" . $value . " />";
+				echo "<input type='mail' id ='mail' class='mail'  name=" . $value . " required/>";
+				echo "<span class='error' aria-live='polite'></span>";
 			} elseif ($value == "sex") {
 				afficherRadio($sex);
 			} elseif ($value == "listintitule") {
 				echo "<label for='gendre'>Quelle est votre Intitulé:</label>";
-				echo "<select name='intitule' id='intitule'>";
+				echo "<select name='intitule' id='intitule' required>";
 				echo "<br>";
 				echo alimenterListeDeroulante($elements);
 				echo "</select>";
 			} else
-				echo "<input type='text' name=" . $value . " />";
+				echo "<input type='text' name=" . $value . " required/>";
 			echo "<br>";
 		}
 	};
+
+
+
+
+	echo "<form>";
 	echo afficherInput($nomsInput);
-	echo "</form>"
+	echo "<input type='submit' value='Envoyer le formulaire'>";
+	echo "</form>";
+
+	echo "<form>";
+	echo "<label for='mail'>Pourriez-vous nous fournir une adresse mail ?</label>";
+	echo "<input type='email' id='mail2' name='mail'>";
+	echo "<button>Envoyer</button>";
+	echo "</form>";
+
 
 	?>
 </body>
