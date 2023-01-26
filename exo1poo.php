@@ -1,16 +1,4 @@
-<h1>Exercice 1 poo </h1>
-<p>Un compte bancaire est composé des éléments suivants :<br>
-	Un libellé (compte courant, livret A, ...)<br>
-	Un solde initial<br>
-	Une devise monétaire<br>
-	Un titulaire unique<br>
 
-</p>
-<h2>
-	Affichage :<br>
-	<br>
-	<br>
-</h2>
 <?php
 
 class Compte
