@@ -28,7 +28,8 @@
 		{
 			// déclaration
 			private string $_marque = "";
-			private string $_model = "";
+			//accessible de la class fille
+			protected string $_model = "";
 			
 			public function __construct($marque, $model)
 			{
@@ -44,7 +45,7 @@
 
 			public function getInfos()
 			{
-				$ecrire = "Infos véhicule $this->_marque  $this->_model";
+				$ecrire = "Infos véhicule $this->_marque $this->_model ";
 				return $ecrire;
 			}
 
@@ -84,7 +85,8 @@
 
 			 public function getInfos()
 			 {
-			 	$ecrire =  parent::getInfos() . " ". $this->_autonomie;
+																		//protected accesible du classe fille	
+			 	$ecrire =  parent::getInfos() . " ". $this->_autonomie  . " ". $this->_model;
 			 	return $ecrire;
 			 }
 
@@ -99,6 +101,9 @@ $ve2 = new VoitureElec( "Peugeot","408" ,100);
  echo $v1->getInfos();
  echo "<br>";
  echo $ve2->getInfos();
+
+//out of class Cannot access protected property
+ //echo $ve2->_model;
  
 
     ?>    
