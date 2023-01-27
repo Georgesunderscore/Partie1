@@ -48,7 +48,7 @@
 				return $ecrire;
 			}
 
-			public function displayVoitureInfo()
+			public function getInfos()
 			{
 				$ecrire = "Infos véhicule $this->_marque  $this->_model  $this->_nbportes  $this->_vitesseActuelle";
 				return $ecrire;
