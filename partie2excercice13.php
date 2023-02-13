@@ -122,12 +122,10 @@
 				}
 			}
 			public function ralentir($vitesse){
-				if($this->getVitesseActuelle() > 0 and $this->getVitesseActuelle() > $vitesse  ){
+				if($this->getVitesseActuelle() > 0 and $this->getVitesseActuelle() > $vitesse  )
 					$this->setVitesseActuelle($this->getVitesseActuelle() - $vitesse);
-				}
-				else {
-					$this->setVitesseActuelle(0);
-				}
+			else $this->setVitesseActuelle(0);
+					 
 			}
 		}
 
@@ -143,9 +141,9 @@ $v2 = new Voiture("Peugeot", "8000", 4 , 0) ;
  $v1->accelerer(10);
  echo $v1->getVitesseActuelle();
 
-// echo $v1;
+ echo $v1;
 // echo "<br>";
-// echo $v2;
+ //echo $v2;
 
 
     ?>    
