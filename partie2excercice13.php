@@ -76,7 +76,7 @@
 
 			public function getNbport(): int
 			{
-				return $this->_nbport;
+				return $this->_nbportes;
 			}
 
 			public function setNbportes(int $nbportes)
@@ -106,21 +106,28 @@
 
 			public function demarrer()
 			{
-				$this.setStatusVoiture(TRUE);
+				$this->setStatusVoiture(TRUE);
 			
 			}
 			public function stopper( )
 			{
-				$this.setStatusVoiture(FALSE);
+				$this->setStatusVoiture(FALSE);
 			}
 
 			public function accelerer($vitesse) 
 			{
+				if($this->getStatusVoiture()){
 				$v1 = $this->getVitesseActuelle();
 				$this->setVitesseActuelle($v1+ $vitesse);
+				}
 			}
 			public function ralentir($vitesse){
-				$this->setVitesseActuelle($this->getVitesseActuelle() - $vitesse);
+				if($this->getVitesseActuelle() > 0 and $this->getVitesseActuelle() > $vitesse  ){
+					$this->setVitesseActuelle($this->getVitesseActuelle() - $vitesse);
+				}
+				else {
+					$this->setVitesseActuelle(0);
+				}
 			}
 		}
 

@@ -34,8 +34,8 @@
 		{
 
 
-			foreach ($elements as $value) {
-				echo "<option valeur=" . $value . ">$value</option>";
+			foreach ($elements as $element) {
+				echo "<option value=" . $element . ">$element</option>";
 				echo "<br>";
 			}
 		};

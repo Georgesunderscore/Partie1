@@ -37,17 +37,35 @@
 	function afficherTableHTML($capitales): void
 	{
 
+
+		echo "<table> 
+				<thead>
+					<tr>
+						<th colspan='1'>
+							Pays 
+						</th>
+						<th colspan='2'>
+							Capitale
+						</th>
+					</tr>
+				</thead>  
+    		</tbody>";
+
+
 		//sort par clé
 		ksort($capitales);
 
 		foreach ($capitales as $key => $value) {
-			echo "<span class='h1red'>" . mb_strtoupper($key) . "</span>";
-			echo " ";
-			echo "<span class='h1red'>" . $value . "</span>";
-
-			echo "<br>";
+			echo"<tr>";
+			echo"<td class='h1red'>" . mb_strtoupper($key) . "</td>";
+			echo"<td class='h1red'>" . mb_strtoupper($value) . "</td>";
+			echo "</tr>" ; 		
 		}
+					
+
+		echo"</tbody> </table>";	
 	};
+
 
 	echo     afficherTableHTML($capitales);
 

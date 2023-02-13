@@ -36,7 +36,7 @@
 		foreach ($nomsRadio as $value) {
 
 			echo "<div>";
-			echo "<input type='radio' id = '$value' name='$value' value='$value' unchecked>";
+			echo "<input type='radio' id = '$value' name='rgChoice' value='$value' unchecked>";
 			echo "<label for='$value'>$value</label>";
 			echo "</div>";
 		}

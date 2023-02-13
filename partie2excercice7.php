@@ -42,9 +42,9 @@
 		//   </div>
 		// </fieldset>
 		$elements = array(
-			"Choix 1" => "1",
-			"Choix 2" => "2",
-			"Choix 3" => "3"
+			"Choix1" => "checked",
+			"Choix2" => "",
+			"Choix3" => "checked"
 		);
 		echo "<fieldset>";
 		echo "<legend>Veuillez sélectionner vos intérêts</legend>";
@@ -56,7 +56,7 @@
 
 			foreach ($elements as $key => $value) {
 				echo "<div>";
-				echo "<input type='checkbox' id=$key name=$key value=$value>";
+				echo "<input type='checkbox' id=$key name=$key $value>";
 				echo "<label for=$key> $key</label>";
 				echo "<br>";
 				echo "</div>";
